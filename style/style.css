@@ -4,12 +4,13 @@
   --Inter: "Inter", sans-serif;
   --Krub: "Krub", sans-serif;
 
-  --bg-main-light: #f6f7fb;
+  --bg-main: #f6f7fb;
 
   --p-xs: 0.75rem;
   --p-s: 1rem;
 
-  --color-black-light: #333333;
+  --color-black: #333333;
+  --color-decor: #e9e9f3;
 }
 
 *,
@@ -22,7 +23,7 @@
 
 body {
   font-family: var(--Poppins);
-  background-color: var(--bg-main-light);
+  background-color: var(--bg-main);
 }
 
 /* Overides */
@@ -37,13 +38,18 @@ ul {
   list-style: none;
 }
 
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
 /* Default classes */
 
 .container {
   width: 100%;
   padding: 0 var(--p-xs);
 }
-
 
 .flex {
   display: flex;
@@ -73,10 +79,33 @@ ul {
 
 .nav_links .nav_link {
   text-decoration: none;
-  color: var(--color-black-light);
+  color: var(--color-black);
   font-weight: 500;
   text-transform: uppercase;
   font-size: large;
+}
+
+/* Decoration Elements Only */
+.decoration {
+  font-family: var(--Poppins);
+}
+
+.decoration div {
+  position: absolute;
+  line-height: 0;
+  z-index: -1;
+}
+
+.decoration svg {
+  fill: var(--color-decor);
+}
+
+.decoration .frontend_text {
+  width: 95vh;
+  top: 0;
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(90deg) translateY(-100%);
 }
 
 @media screen and (min-width: 768px) {
