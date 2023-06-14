@@ -1,13 +1,20 @@
 :root {
-  --Fredoka: 'Fredoka', sans-serif;
-  --Poppins: 'Poppins', sans-serif;
-  --Inter: 'Inter', sans-serif;
-  --Crub: 'Krub', sans-serif;
+  --Fredoka: "Fredoka", sans-serif;
+  --Poppins: "Poppins", sans-serif;
+  --Inter: "Inter", sans-serif;
+  --Krub: "Krub", sans-serif;
 
-  --bg-main-light: #F6F7FB;
+  --bg-main-light: #f6f7fb;
+
+  --p-xs: 0.75rem;
+  --p-s: 1rem;
+
+  --color-black-light: #333333;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,4 +23,70 @@
 body {
   font-family: var(--Poppins);
   background-color: var(--bg-main-light);
+}
+
+/* Overides */
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Default classes */
+
+.container {
+  width: 100%;
+  padding: 0 var(--p-xs);
+}
+
+
+.flex {
+  display: flex;
+}
+
+.align_center {
+  align-items: center;
+}
+
+/* Styles */
+
+.toggle_menu {
+  width: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  font-family: var(--Krub);
+  justify-content: space-between;
+  padding: 0.625rem 0;
+}
+
+.nav_links {
+  display: none;
+}
+
+.nav_links .nav_link {
+  text-decoration: none;
+  color: var(--color-black-light);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: large;
+}
+
+@media screen and (min-width: 768px) {
+  .nav_links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .toggle_menu {
+    display: none;
+  }
 }
