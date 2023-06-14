@@ -1,0 +1,19 @@
+:root {
+  --Fredoka: 'Fredoka', sans-serif;
+  --Poppins: 'Poppins', sans-serif;
+  --Inter: 'Inter', sans-serif;
+  --Crub: 'Krub', sans-serif;
+
+  --bg-main-light: #F6F7FB;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--Poppins);
+  background-color: var(--bg-main-light);
+}
