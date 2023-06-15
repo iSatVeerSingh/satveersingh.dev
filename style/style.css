@@ -14,6 +14,7 @@
   --color-text: #7a7a7a;
   --color-white: #ffffff;
   --black: #000000;
+  --color-blue: #692dca;
 }
 
 *,
@@ -202,6 +203,22 @@ a {
   transform: rotate(90deg) translateY(100%);
 }
 
+.decoration .css_text {
+  width: 50vh;
+  bottom: 0;
+  left: 0;
+  transform-origin: left bottom;
+  transform: rotate(-90deg) translateY(100%);
+}
+
+.decoration .html_text {
+  width: 30vh;
+  top: 10%;
+  right: 0;
+  transform-origin: right top;
+  transform: rotate(-90deg) translateY(-100%);
+}
+
 .hero {
   padding: 1.5rem 0;
   flex-direction: column;
@@ -247,6 +264,43 @@ a {
   fill: var(--black);
 }
 
+.section_wrapper {
+  padding: 1rem 0;
+}
+
+.section_heading {
+  font-size: 2.5rem;
+  font-family: var(--Krub);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.section_subheading {
+  color: var(--color-blue);
+}
+
+.about_me {
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.about_me_tagline {
+  margin-top: 1rem;
+  justify-content: end;
+}
+
+.about_me_tagline div {
+  font-size: 4rem;
+  font-family: var(--Krub);
+  color: var(--black);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1;
+  max-width: 250px;
+}
+
 @media screen and (min-width: 768px) {
   .nav_links {
     display: flex;
@@ -270,7 +324,6 @@ a {
     align-items: center;
     text-align: right;
   }
-
 
   .hero .hero_img {
     display: grid;
@@ -299,16 +352,65 @@ a {
   .scroll_down svg {
     width: 15px;
   }
+
+  .decoration .css_text {
+    width: 50vw;
+    transform: none;
+  }
+
+  .decoration .html_text {
+    width: 70vh;
+  }
+
+  .about_me {
+    max-width: 500px;
+  }
+
+  .about_me_tagline {
+    margin-top: 2rem;
+  }
+
+  .about_me_tagline div {
+    max-width: 500px;
+    line-height: normal;
+  }
+
 }
 
 @media screen and (min-width: 992px) {
   .hero_text h2 {
     font-size: 2.75rem;
   }
+
+  .about_me {
+    max-width: 700px;
+  }
+
+  .decoration .html_text {
+    width: 90vh;
+  }
+
+  .about_me_tagline {
+    margin-top: 4rem;
+  }
+
+  .about_me_tagline div {
+    max-width: 700px;
+    font-size: 5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero_text h2 {
     font-size: 3.25rem;
+  }
+
+  .about_me_tagline {
+    margin-top: 5rem;
+  }
+
+  .about_me_tagline div {
+    max-width: 900px;
+    font-size: 6rem;
   }
 }
