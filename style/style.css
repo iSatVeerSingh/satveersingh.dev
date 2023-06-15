@@ -372,7 +372,6 @@ a {
 
   .about_me_tagline div {
     max-width: 500px;
-    line-height: normal;
   }
 
 }
@@ -391,10 +390,11 @@ a {
   }
 
   .about_me_tagline {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   .about_me_tagline div {
+    line-height: normal;
     max-width: 700px;
     font-size: 5rem;
   }
@@ -406,11 +406,21 @@ a {
   }
 
   .about_me_tagline {
-    margin-top: 5rem;
+    margin-top: 2.5rem;
   }
 
   .about_me_tagline div {
     max-width: 900px;
     font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .about_me_tagline {
+    margin-top: 5rem;
+  }
+
+  .about_me_tagline div {
+    font-size: 7rem;
   }
 }
