@@ -5,6 +5,7 @@
   --Krub: "Krub", sans-serif;
 
   --bg-main: #f6f7fb;
+  --bg-second: #EBE4F8;
 
   --p-xs: 0.75rem;
   --p-s: 1rem;
@@ -15,6 +16,7 @@
   --color-white: #ffffff;
   --black: #000000;
   --color-blue: #692dca;
+  --color-medium-black: #222222;
 }
 
 *,
@@ -104,8 +106,8 @@ a {
   display: flex;
 }
 
-.align_center {
-  align-items: center;
+.grid {
+  display: grid;
 }
 
 .btn {
@@ -265,18 +267,19 @@ a {
 }
 
 .section_wrapper {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .section_heading {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-family: var(--Krub);
   text-transform: uppercase;
   line-height: 1;
+  color: var(--black);
 }
 
-.section_subheading {
-  color: var(--color-blue);
+.about .section_heading {
+  font-size: 4rem;
 }
 
 .about_me {
@@ -300,6 +303,54 @@ a {
   line-height: 1;
   max-width: 250px;
 }
+
+.heading_wrapper {
+  align-items: baseline;
+  gap: 5px;
+}
+
+.section_subheading {
+  font-weight: 600;
+}
+
+.heading_dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.skills_wrapper {
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+
+.skill_item {
+  text-align: center;
+  background-color: var(--bg-second);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-medium-black);
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px dashed var(--color-blue);
+  transition: all 0.3s;
+}
+
+.skill_item:hover {
+  transform-origin: right bottom;
+  transform: rotate(5deg);
+}
+
+.decoration .react_text {
+  width: 70vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
 
 @media screen and (min-width: 768px) {
   .nav_links {
@@ -374,6 +425,19 @@ a {
     max-width: 500px;
   }
 
+  .heading_dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .section_subheading {
+    font-size: 2.5rem;
+  }
+
+  .skills_wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -398,6 +462,21 @@ a {
     max-width: 700px;
     font-size: 5rem;
   }
+
+  .skills_wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .skill_item {
+    font-size: 2rem;
+  }
+
+  .decoration .react_text {
+    width: 55vw;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -411,7 +490,7 @@ a {
 
   .about_me_tagline div {
     max-width: 900px;
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 
@@ -422,5 +501,15 @@ a {
 
   .about_me_tagline div {
     font-size: 7rem;
+  }
+
+  .skills_wrapper {
+    gap: 3rem;
+  }
+
+  .skill_item {
+    font-size: 2rem;
+    padding: 2.5rem 2rem;
+    border-width: 4px;
   }
 }
